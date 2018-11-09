@@ -29,9 +29,21 @@ namespace GetOtec
                     "~/Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js",
                     "~/Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
 
-            // Use la versión de desarrollo de Modernizr para desarrollar y aprender. Luego, cuando esté listo
-            // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            // El orden es muy importante para el funcionamiento de estos archivos ya que tienen dependencias explícitas
+            //bundles.Add(new ScriptBundle("~/Assets/template/lib").Include(
+            //        "~/Assets/template/lib/jquery/jquery.js",
+            //        "~/Assets/template/lib/popper.js/popper.js",
+            //        "~/Assets/template/lib/bootstrap/bootstrap.js",
+            //        "~/Assets/template/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js",
+            //        "~/Assets/template/js/starlight.js"));
+
+
+
+
+
+                 // Use la versión de desarrollo de Modernizr para desarrollar y aprender. Luego, cuando esté listo
+                 // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite
+                 bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
         }
     }
