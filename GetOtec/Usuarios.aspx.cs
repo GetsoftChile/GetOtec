@@ -13,6 +13,8 @@ namespace GetOtec
     public partial class Usuarios : System.Web.UI.Page
     {
         Datos dal = new Datos();
+        PerfilAccess PerfilDal = new PerfilAccess();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -54,7 +56,7 @@ namespace GetOtec
         void BuscarPerfil()
         {
             Perfil per = new Perfil();
-            ddlPerfil.DataSource = dal.GetBuscarPerfil(per);
+            ddlPerfil.DataSource = PerfilDal.GetBuscarPerfil(per);
             ddlPerfil.DataValueField = "IdPerfil";
             ddlPerfil.DataTextField = "NomPerfil";
             ddlPerfil.DataBind();
